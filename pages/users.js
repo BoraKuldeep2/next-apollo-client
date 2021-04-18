@@ -87,7 +87,7 @@ const Users = () => {
 export default Users;
 
 /* populate data during build time */
-export const getStaticProps = async () => {
+export const getStaticProps2 = async () => {
   const {initializeApollo} = await import('../lib/apolloClient');
   const apolloClient = initializeApollo();
   await apolloClient.query({
