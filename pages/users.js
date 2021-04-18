@@ -66,6 +66,7 @@ const Users = () => {
               <a>Go Home</a>
             </button>
           </Link>
+          <span title="Might take few seconds to load first time">
           <button
             onClick={() =>
               fetchMore({
@@ -77,6 +78,7 @@ const Users = () => {
           >
             Load more
           </button>
+          </span>
         </div>
     </div>
   );
