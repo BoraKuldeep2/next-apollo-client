@@ -29,7 +29,7 @@ const Users = () => {
   });
 
   if (loading) {
-      return return (
+      return (
         <div className={styles.loader}>
           <p> Might take few sceonds on first start up </p>
         </div>
