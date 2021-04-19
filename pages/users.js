@@ -31,8 +31,8 @@ const Users = () => {
   if (loading) {
       return (
         <div>
-          <div className={styles.loader} />
-          <p> Might take few sceonds on first start up </p>
+          <div className={styles.loader}></div>
+          <p> Might take few sceonds first time </p>
         </div>
       );
   }
