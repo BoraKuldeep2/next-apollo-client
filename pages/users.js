@@ -29,7 +29,11 @@ const Users = () => {
   });
 
   if (loading) {
-      return <div className={styles.loader}></div>;
+      return return (
+        <div className={styles.loader}>
+          <p> Might take few sceonds on first start up </p>
+        </div>
+      );
   }
 
   if (error) {
@@ -66,7 +70,6 @@ const Users = () => {
               <a>Go Home</a>
             </button>
           </Link>
-          <span title="Might take few seconds to load first time">
           <button
             onClick={() =>
               fetchMore({
@@ -78,7 +81,6 @@ const Users = () => {
           >
             Load more
           </button>
-          </span>
         </div>
     </div>
   );
@@ -86,8 +88,9 @@ const Users = () => {
 
 export default Users;
 
-/* populate data during build time */
-export const getStaticProps2 = async () => {
+/* populate data during build time. uncomment below function for static generation at build time */
+/*
+export const getStaticProps = async () => {
   const {initializeApollo} = await import('../lib/apolloClient');
   const apolloClient = initializeApollo();
   await apolloClient.query({
@@ -99,3 +102,4 @@ export const getStaticProps2 = async () => {
   });
   return { props: { initialApolloState: apolloClient.cache.extract() } };
 };
+*/
